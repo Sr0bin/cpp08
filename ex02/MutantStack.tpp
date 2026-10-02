@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 17:59:10 by rorollin          #+#    #+#             */
-/*   Updated: 2026/10/02 18:49:06 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/10/02 19:08:37 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typename MutantStack<T, Container>::iterator MutantStack<T, Container>::begin(vo
 }
 
 template <typename T, typename Container>
-typename MutantStack<T, Container>::iterator MutantStack<T, Container>::rbegin(void)
+typename MutantStack<T, Container>::reverse_iterator MutantStack<T, Container>::rbegin(void)
 {
 	return (this->c.rbegin());
 }
@@ -55,7 +55,31 @@ typename MutantStack<T, Container>::iterator MutantStack<T, Container>::end(void
 }
 
 template <typename T, typename Container>
-typename MutantStack<T, Container>::iterator MutantStack<T, Container>::rend(void)
+typename MutantStack<T, Container>::reverse_iterator MutantStack<T, Container>::rend(void)
+{
+	return (this->c.rend());
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::const_iterator MutantStack<T, Container>::begin(void) const
+{
+	return (this->c.begin());
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::const_iterator MutantStack<T, Container>::end(void) const
+{
+	return (this->c.end());
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::const_reverse_iterator MutantStack<T, Container>::rbegin(void) const
+{
+	return (this->c.rbegin());
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::const_reverse_iterator MutantStack<T, Container>::rend(void) const
 {
 	return (this->c.rend());
 }
