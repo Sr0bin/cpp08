@@ -6,7 +6,7 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 17:02:21 by rorollin          #+#    #+#             */
-/*   Updated: 2026/10/01 17:26:26 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/10/02 19:12:17 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,15 @@ typename T::iterator easyfind(T &cont, int i)
 	if (it != cont.end())
 		return it;
 	throw std::out_of_range("Nothing found");
-	
 }
 
+template <typename T>
+typename T::const_iterator easyfind(const T &cont, int i)
+{
+	typename T::const_iterator it = std::find(cont.begin(), cont.end(), i);
+	if (it != cont.end())
+		return it;
+	throw std::out_of_range("Nothing found");
+}
 
 #endif
