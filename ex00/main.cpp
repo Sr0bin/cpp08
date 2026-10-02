@@ -6,11 +6,11 @@
 /*   By: rorollin <rorollin@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 17:01:44 by rorollin          #+#    #+#             */
-/*   Updated: 2026/10/01 17:02:16 by rorollin         ###   ########.fr       */
+/*   Updated: 2026/10/02 19:07:49 by rorollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easytype.hpp"
+#include "easyfind.hpp"
 #include <iostream>
 #include <vector>
 #include <list>
